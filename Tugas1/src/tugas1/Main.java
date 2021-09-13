@@ -26,13 +26,14 @@ public class Main {
         System.out.println("===================================================================");
         System.out.println("\tCreate Data");
         System.out.println("===================================================================");
-
+        
+      
         System.out.print("Nama\t: ");
-        String nama = scanner.next();
+        String nama = scanner.nextLine();
         System.out.print("NIM\t: ");
-        String nim = scanner.next();
+        String nim = scanner.nextLine();
         System.out.print("Alamat\t: ");
-        String alamat = scanner.next();
+        String alamat = scanner.nextLine();
 
         client.create(nama, nim, alamat);
 
@@ -43,7 +44,7 @@ public class Main {
 
         while (ulang) {
             System.out.print("Kembali ke menu? (y/n) : ");
-            String repeat = scanner.next();
+            String repeat = scanner.nextLine();
 
             if (repeat.equals("y")) {
                 bool = true;
@@ -61,7 +62,7 @@ public class Main {
     
     public static boolean aksiRead(Scanner scanner, CRUD client) {
         System.out.println("===================================================================");
-        System.out.println("\tCreate Data");
+        System.out.println("\tRead Data");
         System.out.println("===================================================================");
         
         client.read();
@@ -71,7 +72,7 @@ public class Main {
 
         while (ulang) {
             System.out.print("Kembali ke menu? (y/n) : ");
-            String repeat = scanner.next();
+            String repeat = scanner.nextLine();
 
             if (repeat.equals("y")) {
                 bool = true;
@@ -94,7 +95,7 @@ public class Main {
         System.out.println("===================================================================");
         
         System.out.print("Cari Mahasiswa\t: ");
-        String hint = scanner.next();
+        String hint = scanner.nextLine();
         
         client.search(hint);
         
@@ -103,7 +104,7 @@ public class Main {
         
         while (ulang) {
             System.out.print("Kembali ke menu? (y/n) : ");
-            String repeat = scanner.next();
+            String repeat = scanner.nextLine();
 
             if (repeat.equals("y")) {
                 bool = true;
@@ -133,16 +134,16 @@ public class Main {
         
         while (ulang) {
             System.out.print("NIM Mahasiswa yang ingin di-update (0 untuk keluar) : ");
-            String nim = scanner.next();
+            String nim = scanner.nextLine();
             if (nim.equals("0")) {
                 ulang = false;
             } else {
                 System.out.print("Nama baru (skip => - ) : ");
-                String nama = scanner.next();
+                String nama = scanner.nextLine();
                 System.out.print("NIM baru (skip => - ) : ");
-                String newNim = scanner.next();
+                String newNim = scanner.nextLine();
                 System.out.print("Alamat baru (skip => - ) : ");
-                String alamat = scanner.next();
+                String alamat = scanner.nextLine();
 
 
                 if (client.update(nim, nama, newNim, alamat)) {
@@ -161,7 +162,7 @@ public class Main {
 
         while (ulang) {
             System.out.print("Kembali ke menu? (y/n) : ");
-            String repeat = scanner.next();
+            String repeat = scanner.nextLine();
 
             if (repeat.equals("y")) {
                 bool = true;
@@ -190,7 +191,7 @@ public class Main {
         
         while (ulang) {
             System.out.print("NIM Mahasiswa yang ingin di-delete (0 untuk keluar) : ");
-            String nim = scanner.next();
+            String nim = scanner.nextLine();
             if (nim.equals("0")) {
                 ulang = false;
             } else {
@@ -210,7 +211,7 @@ public class Main {
 
         while (ulang) {
             System.out.print("Kembali ke menu? (y/n) : ");
-            String repeat = scanner.next();
+            String repeat = scanner.nextLine();
 
             if (repeat.equals("y")) {
                 bool = true;
@@ -236,7 +237,7 @@ public class Main {
             menu();
             Scanner pilihan = new Scanner(System.in);
             System.out.print("Pilih Nomor Aksi : ");
-            String aksi = pilihan.next();
+            String aksi = pilihan.nextLine();
             System.out.println("\n\n");
 
 

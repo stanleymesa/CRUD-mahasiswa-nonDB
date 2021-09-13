@@ -39,15 +39,15 @@ public class CRUD {
                 searchMhs.add(listMhs.get(i-1));
             }
         }
-        System.out.println("No.\tNama\t\tNIM\t\t\tAlamat");
+        System.out.println("\nNo.\tNama\t\tNIM\t\t\tAlamat");
         System.out.println("===================================================================");
         for (int i = 1; i <= searchMhs.size(); i++) {
             System.out.print(i + ".\t");
             System.out.print(searchMhs.get(i-1).getNama() + "\t\t");
             System.out.print(searchMhs.get(i-1).getNim() + "\t\t");
             System.out.print(searchMhs.get(i-1).getAlamat());
-            System.out.println("");
         }
+        System.out.println("");
     }
     
     public boolean update(String nim, String nama, String newNim, String alamat) {
