@@ -34,7 +34,7 @@ public class CRUD {
     public void search(String hint) {
         String dataFromList;
         for (int i = 1; i <= listMhs.size(); i++) {
-            dataFromList = (listMhs.get(i-1).getNama() + listMhs.get(i-1).getNim() + listMhs.get(i-1).getAlamat()).toLowerCase();
+            dataFromList = ( listMhs.get(i-1).getNama() + listMhs.get(i-1).getNim() + listMhs.get(i-1).getAlamat() ).toLowerCase();
             if (dataFromList.contains(hint.toLowerCase())) {
                 searchMhs.add(listMhs.get(i-1));
             }
@@ -46,8 +46,11 @@ public class CRUD {
             System.out.print(searchMhs.get(i-1).getNama() + "\t\t");
             System.out.print(searchMhs.get(i-1).getNim() + "\t\t");
             System.out.print(searchMhs.get(i-1).getAlamat());
+            System.out.println("");
         }
         System.out.println("");
+        
+        searchMhs.clear();
     }
     
     public boolean update(String nim, String nama, String newNim, String alamat) {
